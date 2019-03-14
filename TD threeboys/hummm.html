@@ -1,0 +1,202 @@
+<html>
+<head>
+        <meta charset="utf-8">
+        <title>jean-aquilas BOUA</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+                
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+            <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+            <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+     <table border="5px" id="tab" class="preloader">
+         <thead>
+             <tr>
+                 <th>CIVILITE</th>
+                 <th><input type="checkbox"></th>
+                
+                 
+             </tr>
+         </thead>
+         <tbody>
+                <tr>
+                        <th>NOM</th>
+                        <h6 id="nomError"></h6>
+                        <th><input type="text" name="nom" id="nom"></th>
+                       
+                        
+                    </tr> 
+                    <tr>
+                            <th>PRENOMS</th>
+                            <h6 id="prenomError"></h6>
+                            <th><input type="text" name="prenom" id="prenom"></th>
+                           
+                            
+                        </tr> 
+                        <tr>
+                                <th>ADRESSE</th>
+                                <h6 id="commentaireError"></h6>
+                                <th><textarea name="commentaire" id="commentaire"></textarea></th>
+                               
+                                
+                            </tr> 
+                            <tr>
+                                    <th>VILLE</th>
+                                    <h6 id="villeError"></h6>
+                                    <th><input type="text" name="ville" id="ville"> code postal:  <input type="text" name="code" id="code"> </th>
+                                   
+                                    
+                                </tr> 
+                                <tr>
+                                        <th></th>
+                                        <th> <input type="checkbox" name="checkbox" id="checkbox">  je souhaite recevoir la newslettre - couriel <h6 id="emailError"></h6><input type="email" name="email" id="email"> </th>
+                                       
+                                        
+                                    </tr> 
+                                    <tr>
+                                            
+                                            <th><input type="submit" id="envoyer"></th>
+                                             <th></th>
+                                            
+                                        </tr> 
+         </tbody>
+
+         <script>
+                $('[data-toggle="tooltip "]').tooltip();
+                $(".preloader ").fadeOut();
+            
+            
+            
+                var
+                nom = document.getElementById('nom'),
+                prenom = document.getElementById('pass'),
+                email = document.getElementById('email'),
+                adresse = document.getElementById('commentaire'),
+                ville = document.getElementById('ville'),
+                codepost = document.getElementById('code'),
+
+            
+                nomError = document.getElementById('nomError'),
+                prenomError = document.getElementById('prenomError'),
+                emailError = document.getElementById('emailError'),
+                adresseError = document.getElementById('codeError'),
+            
+                //validation ok
+                validationOk = document.createElement('div'), 
+                ok = ' ',  
+                temoinOk = true, 
+            
+                //validation
+                validation = document.getElementById('envoyer');
+                validation.addEventListener("click", f_valid);
+            
+                //fonction
+            
+            
+            function f_valid(e)
+                {
+                    if(nom.validity.valueMissing)
+                        {
+                            e.preventDefault();
+                            nomError.textContent = 'Entrer un nom svp';
+                            nomError.style.color = 'red';
+                            temoinOk = false;
+                        }
+            
+                    else
+                        {
+                            nomError.textContent = null;
+                            temoinOk = true
+                        }
+            
+                    if(email.validity.valueMissing)
+                        {
+                            e.preventDefault();
+                            emailError.textContent = 'Entrer un email svp';
+                            emailError.style.color = 'red';
+                            temoinOk = false;
+            
+                        }
+            
+                    else
+                        {
+                            emailError.textContent = null;
+                            temoinOk = true
+                        }
+            
+                    if(prenom.validity.valueMissing)
+                        {
+                            e.preventDefault();
+                            prenomError.textContent = 'Entrer un pass svp';
+                            prenomError.style.color = 'red';
+                            temoinOk = false;
+                        }
+            
+                    else
+                        {
+                            prenomError.textContent = null;
+                            temoinOk = true
+                        }
+                        if(adresse.validity.valueMissing)
+                        {
+                            e.preventDefault();
+                            adresseError.textContent = 'Entrer un pass svp';
+                            adresseError.style.color = 'red';
+                            temoinOk = false;
+                        }
+            
+                    else
+                        {
+                            adresseError.textContent = null;
+                            temoinOk = true
+                        }
+            
+                        if(ville.validity.valueMissing)
+                        {
+                            e.preventDefault();
+                            villeError.textContent = 'Entrer un pass svp';
+                            villeError.style.color = 'red';
+                            temoinOk = false;
+                        }
+            
+                    else
+                        {
+                            villeError.textContent = null;
+                            temoinOk = true
+                        }
+
+
+                        if(codepost.validity.valueMissing)
+                        {
+                            e.preventDefault();
+                            codeError.textContent = 'Entrer un pass svp';
+                            codeError.style.color = 'red';
+                            temoinOk = false;
+                        }
+            
+                    else
+                        {
+                            codeError.textContent = null;
+                            temoinOk = true
+                        }
+
+                }
+            
+                </script>
+
+
+
+
+
+
+
+
+
+
+
+     </table>
+</body>
+</html>

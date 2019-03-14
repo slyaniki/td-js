@@ -1,0 +1,119 @@
+body{
+background-color: gray;
+}
+#menu{
+    background:#fff;
+	border:0;
+	font:14px "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color:#a09d99;
+    line-height:22px;
+    float:top;
+	padding:71px 16px 0 0;
+}
+h1 {
+	float:left;
+    padding:33px 0 0 16px;}
+    #menu li {
+        float: right;;
+        padding-left:1px;
+        margin-top: -10px;
+        list-style: none;
+        
+    }
+    #menu li a {
+        display:block;
+        font-size:19px;
+        color:#130c04;
+        text-decoration:none;
+        line-height:42px;
+        height:43px;
+        padding:0 19px;
+        border-radius:8px;
+        -moz-border-radius:8px;
+        -webkit-border-radius:8px;
+        position:relative;
+        
+
+
+        
+    }
+
+    #menu li a:hover, #menu .active a {
+        background:url(../images/menu_bg.gif) bottom repeat-x #92d30f;
+        color:#fff
+    }
+    #log{
+        margin-top: -60px;
+    }
+h3{
+    margin: 450px;
+    padding: -10px;
+    margin-top: -30px;
+}
+h1{
+    margin: -5px;
+    padding: -10px;
+    margin-top: 2px;
+}
+    h3{
+    margin: 450px;
+    padding: -10px;
+    margin-top: 50px;
+    }
+    .images img{
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 50%;
+     margin-left: 300px;
+     margin-top: 200px;
+    }
+    .images img:last-child{
+        display: none;
+    }
+    .box{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 400px;
+        height: 400px;
+        background: url(ps.jpg);
+
+ }
+.light{
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        background: rgba(0,0,0,.5);
+        border-radius: 50%;
+        pointer-events: none;
+        transition: 0.5s;
+    }
+    td,th{
+    border: 1px solid black;
+
+    }
+    table{
+        border-collapse: collapse;
+    
+        }
+#tab{
+    margin-left: 500px;
+    margin-top: 150px;
+}   
+textarea{
+    width: 250px;
+    height: 50px;
+    margin-left: 60px;
+}     
+input{
+    width: 70px;
+    height: 20px;
+    margin-left: 40px;
+
+}
+
+
+
+    
